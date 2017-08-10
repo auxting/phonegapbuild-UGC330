@@ -17438,7 +17438,7 @@ angular.module('mm.core.login')
 angular.module('mm.core.login')
 .controller('mmLoginSiteCtrl', ["$scope", "$state", "$mmSitesManager", "$mmUtil", "$ionicHistory", "$mmApp", "$ionicModal", "$ionicPopup", "$mmLoginHelper", "$q", function($scope, $state, $mmSitesManager, $mmUtil, $ionicHistory, $mmApp, $ionicModal, $ionicPopup,
         $mmLoginHelper, $q) {
-    $scope.siteurl = '';
+    $scope.siteurl = '104.198.204.184';
     $scope.connect = function(url) {
         $mmApp.closeKeyboard();
         if (!url) {
