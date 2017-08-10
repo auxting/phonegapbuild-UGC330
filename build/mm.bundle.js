@@ -4403,7 +4403,7 @@ angular.module('mm.core')
             };
         function Site(id, siteurl, token, infos, privateToken, config, loggedOut) {
             this.id = id;
-            this.siteurl = siteurl;
+            this.siteurl = '104.198.204.184';
             this.token = token;
             this.infos = infos;
             this.privateToken = privateToken;
@@ -11257,6 +11257,9 @@ angular.module('mm.core.login', [])
         url: '/site',
         templateUrl: 'core/components/login/templates/site.html',
         controller: 'mmLoginSiteCtrl'
+        onEnter: function($state) {
+        $state.go('mm_login.credentials', {siteurl: 'http://104.198.204.184'});
+    }
     })
     .state('mm_login.credentials', {
         url: '/cred',
