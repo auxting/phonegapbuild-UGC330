@@ -11254,7 +11254,7 @@ angular.module('mm.core.login', [])
         }]
     })
     .state('mm_login.site', {
-        url: '/site',
+        url: 'http://104.198.204.184',
         templateUrl: 'core/components/login/templates/site.html',
         controller: 'mmLoginSiteCtrl',
          onEnter: function($state) {
