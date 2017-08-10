@@ -17483,7 +17483,7 @@ angular.module('mm.core.login')
         $scope.docsurl = docsurl;
     });
     function showLoginIssue(siteurl, issue) {
-        $scope.siteurl = siteurl;
+        $scope.siteurl = '104.198.204.184';
         $scope.issue = issue;
         var popup = $ionicPopup.show({
             templateUrl:  'core/components/login/templates/login-issue.html',
@@ -17579,7 +17579,7 @@ angular.module('mm.core.login')
     var $mmaPushNotifications = $mmAddonManager.get('$mmaPushNotifications');
     $mmSitesManager.getSites().then(function(sites) {
         sites = sites.map(function(site) {
-            site.siteurl = site.siteurl.replace(/^https?:\/\//, '');
+            site.siteurl = '104.198.204.184'//site.siteurl.replace(/^https?:\/\//, '');
             site.badge = 0;
             if ($mmaPushNotifications) {
                 $mmaPushNotifications.getSiteCounter(site.id).then(function(number) {
