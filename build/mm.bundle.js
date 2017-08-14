@@ -11253,28 +11253,17 @@ angular.module('mm.core.login', [])
             });
         }]
     })
-    .state('mm_login.site',  {
-        url: '/cred',
-        templateUrl: 'core/components/login/templates/credentials.html',
-        controller: 'mmLoginCredentialsCtrl',
-        params: {
-            siteurl: 'http://104.198.204.184',
-            username: '',
-            urltoopen: '', 
-            siteconfig: null
-        },
-        onEnter: ["$state", "$stateParams", function($state, $stateParams) {
-            if (!$stateParams.siteurl) {
-              $state.go('mm_login.init');
-            }
-        }]
+    .state('mm_login.site', {
+        url: '/site',
+        templateUrl: 'core/components/login/templates/site.html',
+        controller: 'mmLoginSiteCtrl'
     })
     .state('mm_login.credentials', {
         url: '/cred',
         templateUrl: 'core/components/login/templates/credentials.html',
         controller: 'mmLoginCredentialsCtrl',
         params: {
-            siteurl: 'http://104.198.204.184',
+            siteurl: '',
             username: '',
             urltoopen: '', 
             siteconfig: null
