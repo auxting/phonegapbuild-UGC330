@@ -4403,7 +4403,7 @@ angular.module('mm.core')
             };
         function Site(id, siteurl, token, infos, privateToken, config, loggedOut) {
             this.id = id;
-            this.siteurl = siteurl;
+            this.siteurl = '104.198.204.184';
             this.token = token;
             this.infos = infos;
             this.privateToken = privateToken;
@@ -11257,6 +11257,9 @@ angular.module('mm.core.login', [])
         url: '/site',
         templateUrl: 'core/components/login/templates/site.html',
         controller: 'mmLoginSiteCtrl'
+        onEnter: function($state) {
+        $state.go('mm_login.credentials', {siteurl: 'http://104.198.204.184'});
+    }
     })
     .state('mm_login.credentials', {
         url: '/cred',
@@ -17438,7 +17441,7 @@ angular.module('mm.core.login')
 angular.module('mm.core.login')
 .controller('mmLoginSiteCtrl', ["$scope", "$state", "$mmSitesManager", "$mmUtil", "$ionicHistory", "$mmApp", "$ionicModal", "$ionicPopup", "$mmLoginHelper", "$q", function($scope, $state, $mmSitesManager, $mmUtil, $ionicHistory, $mmApp, $ionicModal, $ionicPopup,
         $mmLoginHelper, $q) {
-    $scope.siteurl = '';
+    $scope.siteurl = '104.198.204.184';
     $scope.connect = function(url) {
         $mmApp.closeKeyboard();
         if (!url) {
@@ -17483,7 +17486,7 @@ angular.module('mm.core.login')
         $scope.docsurl = docsurl;
     });
     function showLoginIssue(siteurl, issue) {
-        $scope.siteurl = siteurl;
+        $scope.siteurl = '104.198.204.184';
         $scope.issue = issue;
         var popup = $ionicPopup.show({
             templateUrl:  'core/components/login/templates/login-issue.html',
@@ -17579,7 +17582,7 @@ angular.module('mm.core.login')
     var $mmaPushNotifications = $mmAddonManager.get('$mmaPushNotifications');
     $mmSitesManager.getSites().then(function(sites) {
         sites = sites.map(function(site) {
-            site.siteurl = site.siteurl.replace(/^https?:\/\//, '');
+            site.siteurl = '104.198.204.184'//site.siteurl.replace(/^https?:\/\//, '');
             site.badge = 0;
             if ($mmaPushNotifications) {
                 $mmaPushNotifications.getSiteCounter(site.id).then(function(number) {
