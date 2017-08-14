@@ -12,9 +12,9 @@
          <hr />
         <p class="padding">Please type the following address <B>{{ 'mm.login.newsitedescription' | translate }}</B> After that please click on login.</p>
         <div class="list item item-input">
-          <input type="url" placeholder="Please type the following address 104.198.204.184/" ng-model="104.198.204.184" mm-no-input-validation mm-auto-focus >
+          <input type="url" placeholder="Please type the following address 104.198.204.184/" ng-model="siteurl" mm-no-input-validation mm-auto-focus >
         </div>
-        <button class="button button-block button-positive" ng-click="connect(104.198.204.184)" ng-disabled="!siteurl">{{ 'mm.login.connect' | translate }}</button>
+        <button class="button button-block button-positive" ng-click="connect(siteurl)" ng-disabled="!siteurl">{{ 'mm.login.connect' | translate }}</button>
       </div>
     </form>
   </ion-content>
