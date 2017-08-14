@@ -6,13 +6,13 @@
     <form class="mm-view-content">
       <div class="box">
         <div class="text-center padding">
-          <img ng-src="img/LOGO.png" class="imgcenter">
+          <img ng-src="img/logo_ugc_e.png" class="imgcenter">
         </div>
-         <p class="padding"><B>IGA English Courses" </B> </p>
+         <p class="padding"><B>Unidad de Educación Virtual "Proyectando las Nuevas Tecnologías en la Educación" </B> </p>
          <hr />
-        <p class="padding">Please type the following address <B>{{ 'mm.login.newsitedescription' | translate }}</B> After that please click on login.</p>
+        <p class="padding">Digite la siguiente URL <B>{{ 'mm.login.newsitedescription' | translate }}</B> Posteriormente seleccione el botón ingresar.</p>
         <div class="list item item-input">
-          <input type="url" placeholder="Please type the following address 104.198.204.184/" ng-model="siteurl" mm-no-input-validation mm-auto-focus >
+          <input type="url" placeholder="Por favor digite la siguiente url virtualidad.ugc.edu.co/" ng-model="siteurl" mm-no-input-validation mm-auto-focus >
         </div>
         <button class="button button-block button-positive" ng-click="connect(siteurl)" ng-disabled="!siteurl">{{ 'mm.login.connect' | translate }}</button>
       </div>
