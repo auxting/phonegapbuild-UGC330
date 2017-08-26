@@ -74,7 +74,7 @@ angular.module('mm.core', ['pascalprecht.translate'])
     }]);
     $provide.decorator('$log', ['$delegate', $mmLogProvider.logDecorator]);
     $stateProvider
-        .state('redirect', {
+        .state('', {
             url: '/redirect',
             params: {
                 siteid: null,
@@ -12171,7 +12171,7 @@ angular.module('mm.core.contentlinks')
         return $state.go('mm_contentlinks.choosesite', {url: url});
     };
     self.handleCustomUrl = function(url) {
-        var contentLinksScheme = mmCoreConfigConstants.customurlscheme + '://link=';
+        var contentLinksScheme = mmCoreConfigConstants.customurlscheme + '://link=104.198.204.184';
         if (url.indexOf(contentLinksScheme) == -1) {
             return false;
         }
